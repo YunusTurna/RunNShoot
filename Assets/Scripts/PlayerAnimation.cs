@@ -8,6 +8,7 @@ public class PlayerAnimation : MonoBehaviour
     Rigidbody2D rb;
     private bool isGrounded = false;
     private bool isDead = false;
+    private bool isAttack = false;
     
     void Start()
     {
@@ -22,11 +23,15 @@ public class PlayerAnimation : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space)){
             isGrounded = false;
         }
+        if(Input.GetKeyDown(KeyCode.X)){
+            isAttack = true;
+        }
         
         Run();
         Jump();
         Crouch();
         Dead();
+        Attack();
     }
     void Run()
     {
@@ -71,6 +76,21 @@ public class PlayerAnimation : MonoBehaviour
         if(isDead == true)
         {
             animator.SetBool("IsDead" , true);
+        }
+    }
+
+    void Attack()
+    {
+        if(isAttack == true)
+        {
+            animator.SetBool("IsAttack" , true);
+            isAttack = false;
+
+        }
+        else
+        {
+            animator.SetBool("IsAttack" , false);
+
         }
     }
     private void OnCollisionEnter2D(Collision2D other)

@@ -8,6 +8,8 @@ TagManager:
   - Ground
   - Spikes
   - Platform
+  - Level2
+  - Level3
   layers:
   - Default
   - TransparentFX
@@ -44,4 +46,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 2834479667
+    locked: 0
+  - name: BackDecoration
+    uniqueID: 480175201
+    locked: 0
+  - name: Playable
+    uniqueID: 390474221
+    locked: 0
+  - name: FrontDecoration
+    uniqueID: 119500811
     locked: 0
