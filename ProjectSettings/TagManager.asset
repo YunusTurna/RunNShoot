@@ -10,6 +10,17 @@ TagManager:
   - Platform
   - Level2
   - Level3
+  - SwordMaster
+  - AttackObject
+  - PatrolPoint
+  - PatrolPoint1
+  - PatrolPoint2
+  - Rotate
+  - Detected
+  - BackPoint
+  - MiddlePatrol
+  - AttackObjectFront
+  - AttackObjectBack
   layers:
   - Default
   - TransparentFX
