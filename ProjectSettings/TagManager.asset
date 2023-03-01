@@ -21,6 +21,9 @@ TagManager:
   - MiddlePatrol
   - AttackObjectFront
   - AttackObjectBack
+  - SoldierAttack
+  - Credits
+  - Options
   layers:
   - Default
   - TransparentFX

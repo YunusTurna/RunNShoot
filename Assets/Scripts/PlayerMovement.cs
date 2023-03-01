@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
     public static bool isGrounded = false;
     public float speed = 10;
     private bool isDead = false;
+    
+    private int can = 100;
     Rigidbody2D rb;
     SpriteRenderer sr;
     
@@ -36,6 +38,7 @@ public class PlayerMovement : MonoBehaviour
         if(isDead == true){
             StartCoroutine(Dead());
         }
+        
 
         
 
@@ -85,5 +88,11 @@ public class PlayerMovement : MonoBehaviour
         if(other.gameObject.tag == "Level3"){
             SceneManager.LoadScene("Level3");
         }
+        if(other.gameObject.tag == "SoldierAttack"){
+            can = can-10;
+            Debug.Log(can);
+            rb.AddForce(Vector2.left * 500);
+        }
+        
     }
 }

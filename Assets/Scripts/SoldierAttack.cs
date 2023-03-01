@@ -4,17 +4,19 @@ using UnityEngine;
 
 public class SoldierAttack: MonoBehaviour
 {
-    [SerializeField] GameObject soldierAttackObject;
+    [SerializeField] GameObject soldier;
     Vector3 spawnPoint;
     private bool start;
     void Start()
     {
-        spawnPoint =  new Vector3(transform.position.x - 3 , transform.position.y , transform.position.z);
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        transform.position =  soldier.transform.position;
         
     }
+    
 }
