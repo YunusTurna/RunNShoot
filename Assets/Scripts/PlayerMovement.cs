@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
     public float speed = 10;
     private bool isDead = false;
     
-    private int can = 100;
+    public static int can = 50;
     Rigidbody2D rb;
     SpriteRenderer sr;
     
@@ -92,6 +92,9 @@ public class PlayerMovement : MonoBehaviour
             can = can-10;
             Debug.Log(can);
             rb.AddForce(Vector2.left * 500);
+        }
+        if(other.gameObject.tag == "FinalScene"){
+            SceneManager.LoadScene("FinalScene");
         }
         
     }

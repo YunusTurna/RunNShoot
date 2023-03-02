@@ -19,5 +19,15 @@ public class Button : MonoBehaviour
     public void Play(){
         SceneManager.LoadScene("Level1");
     }
+    public void FullScreen(){
+        Screen.fullScreen = !Screen.fullScreen;
+        Debug.Log("Screen");
+    }
+    public void MainMenu(){
+        SceneManager.LoadScene("MainMenu");
+    }
+    public void Exit(){
+        Application.Quit();
+    }
     
 }

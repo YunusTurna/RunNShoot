@@ -64,6 +64,7 @@ public class SwordMasterAnimation : MonoBehaviour
         if((other.gameObject.tag == "AttackObjectFront") || (other.gameObject.tag == "AttackObjectBack"))
         {
             isDead = true;
+            
             StartCoroutine(Dead());
             
             

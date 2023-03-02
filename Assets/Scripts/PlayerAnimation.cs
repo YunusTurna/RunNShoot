@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerAnimation : MonoBehaviour
 {
@@ -73,9 +74,10 @@ public class PlayerAnimation : MonoBehaviour
 
     }
     void Dead(){
-        if(isDead == true)
+        if(isDead == true || PlayerMovement.can == 0)
         {
             animator.SetBool("IsDead" , true);
+            StartCoroutine(Wait());
         }
     }
 
@@ -105,5 +107,13 @@ public class PlayerAnimation : MonoBehaviour
             isDead = true;
         }
         
+    }
+    IEnumerator  Wait()
+    {
+        
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene("DeadScene");
+
+
     }
 }
